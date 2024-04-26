@@ -1,9 +1,9 @@
 <script lang="ts">
 	import {
-		CommunitySection,
-		DesignSection,
+		TeamSection,
+		AboutSection,
 		FeaturesSection,
-		ThemesSection,
+		TechnologiesSection,
 	} from "$layout";
 	import { defaultI18nValues, Metadata } from "$lib";
 	import { _ } from "svelte-i18n";
@@ -14,10 +14,10 @@
 
 <Metadata title={$_("metadata.home", defaultI18nValues)} />
 
-<DesignSection />
+<AboutSection />
 
 <FeaturesSection />
 
-<ThemesSection />
+<TechnologiesSection />
 
-<CommunitySection {contributors} />
+<TeamSection {contributors} />

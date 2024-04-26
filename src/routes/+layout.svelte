@@ -28,17 +28,6 @@
 			icon: Home,
 		},
 		{
-			name: $_("navbar.docs", defaultI18nValues),
-			path: "/docs",
-			sidebarTree: $page.data.docs ?? [],
-			icon: Book,
-		},
-		{
-			name: $_("navbar.news", defaultI18nValues),
-			path: "/blog",
-			icon: News,
-		},
-		{
 			name: $_("navbar.download"),
 			path: "/download",
 			icon: Download,
@@ -71,7 +60,7 @@
 </script>
 
 <svelte:head>
-	<meta content="Files" name="og:site_name" />
+	<meta content="Scanning Bee" name="og:site_name" />
 
 	<meta content="website" name="og:type" />
 
@@ -91,18 +80,16 @@
 	/>
 
 	<meta
-		content="Files, File Explorer, Fluent Design, Microsoft, Windows, UWP"
+		content="Scanning Bee, Beehive, Annotator, Visualisor"
 		name="keywords"
 	/>
-	<meta content="Files Community" name="author" />
+	<meta content="Scanning Bee Team" name="author" />
 
 	<meta content="#005fb8" name="theme-color" />
 
 	<meta content="summary_large_image" name="twitter:card" />
-	<meta content="@FilesForWindows" name="twitter:site" />
-	<meta content="@FilesForWindows" name="twitter:creator" />
 
-	{#if !dev && $page.url.host === "files.community"}
+	<!-- {#if !dev && $page.url.host === "files.community"}
 		<script type="text/javascript">
 			(function (c, l, a, r, i, t, y) {
 				c[a] =
@@ -117,7 +104,7 @@
 				y.parentNode.insertBefore(t, y);
 			})(window, document, "clarity", "script", "4q1wajdktz");
 		</script>
-	{/if}
+	{/if} -->
 </svelte:head>
 
 <Navbar buttons={navbarButtons} items={navbarItems} />

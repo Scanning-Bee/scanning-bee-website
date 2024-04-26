@@ -1,6 +1,5 @@
 import type { SvelteComponent } from "svelte";
 import type { SvelteHTMLElements } from "svelte/elements";
-import type { DocsTree } from "./docs";
 
 export const links = {
 	discord: "files",
@@ -18,5 +17,4 @@ export type NavbarItem = {
 	external?: boolean;
 	icon: typeof SvelteComponent<SvelteHTMLElements["svg"]>;
 	type?: string;
-	sidebarTree?: DocsTree;
 };

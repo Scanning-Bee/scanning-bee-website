@@ -93,5 +93,5 @@
 </PageSection>
 
 <style lang="scss">
-	@use "FeaturesSection";
+	@use "TechnologiesSection";
 </style>

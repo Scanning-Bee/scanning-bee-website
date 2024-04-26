@@ -1,5 +1,5 @@
 export const defaultI18nValues = {
 	values: {
-		FilesName: "Files",
+		AppName: "Scanning Bee",
 	},
 };

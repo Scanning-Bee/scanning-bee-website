@@ -7,23 +7,22 @@
 	export let avatar_url: string | undefined = undefined;
 	export let type = "User";
 	export let login = "Unknown";
-	export let contributions = 0;
 </script>
 
-{#if type === "User"}
+{#if type === "Software Engineer" || type === "Advisor"}
 	<a tabindex="-1" class="contributor" href={html_url} {...externalLink}>
 		<PersonPicture
 			src={avatar_url}
-			size={32}
+			size={64}
 			alt="{login}'s avatar"
 			loading="lazy"
 		/>
 		<div class="info">
 			<h5>{login}</h5>
 			<span>
-				{$_("home.community.contributions", {
-					values: { amount: contributions, FilesName: "Files" },
-				})}
+				{type === "Software Engineer"
+					? $_("home.team.softwareEngineer")
+					: $_("home.team.advisor")}
 			</span>
 		</div>
 	</a>

@@ -22,7 +22,6 @@ export const externalLink = {
  *
  * isUrlContainPath("/blog","/blog") = true
  * isUrlContainPath("/blog/posts/introducing-files-v2-4","/blog") = true
- * isUrlMathPath("/docs","/blog") = false
  */
 export const isUrlContainPath = (url: string, path: string) =>
 	url === path ||

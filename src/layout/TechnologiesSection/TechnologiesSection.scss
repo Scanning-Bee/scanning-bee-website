@@ -1,0 +1,37 @@
+@use "src/styles/mixins" as *;
+
+// Outer section
+:global {
+	#technologys-section {
+		background-color: var(--fds-solid-background-base);
+
+		// Inner section
+		.page-section-inner {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, 1fr);
+			gap: 48px;
+		}
+	}
+}
+
+// <TechnologyCard /> container
+// Container element for selecting technologys to preview
+.technology-cards-container {
+	--column-count: 6;
+	display: grid;
+	grid-template-columns: repeat(var(--column-count), 1fr);
+	gap: 8px;
+
+	// Small device support
+	@media screen and (width < 1164px) {
+		// Stack cards vertically
+		grid-template-columns: auto;
+	}
+}
+
+// Technologys section small device support
+@media screen and (width < 924px) {
+	:global(#technologys-section .page-section-inner) {
+		grid-template-columns: auto;
+	}
+}

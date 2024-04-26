@@ -103,11 +103,6 @@
 				/>
 			{/each}
 		</div>
-		<div class="buttons-spacer">
-			<Button href="/docs/customize-settings/appearance/" variant="accent">
-				{$_("home.design.learn_more", defaultI18nValues)}
-			</Button>
-		</div>
 	</div>
 	<div
 		class="component-showcase"

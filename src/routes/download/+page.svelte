@@ -1,13 +1,10 @@
 <script lang="ts">
-	import { links } from "$data/links";
 	import { defaultI18nValues, externalLink, Metadata } from "$lib";
-	import { Button, InfoBadge, InfoBar, TextBlock } from "fluent-svelte";
+	import { Button, InfoBar, TextBlock } from "fluent-svelte";
 	import { onMount } from "svelte";
 	import DownloadSourceCard from "./DownloadSourceCard.svelte";
 	import type { DownloadSource } from "./types";
 	import { _ } from "svelte-i18n";
-
-	let isWindows = false;
 
 	const downloadSources = [
 		{
@@ -29,10 +26,6 @@
 			darkModeIcon: "/download-sources/preview_dark.svg",
 		},
 	] as const satisfies readonly DownloadSource[];
-
-	onMount(() => {
-		isWindows = navigator.userAgent.includes("Windows");
-	});
 </script>
 
 <Metadata title="Files • Download" image="download" />

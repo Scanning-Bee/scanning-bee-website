@@ -6,7 +6,6 @@
 		defaultI18nValues,
 		externalLink,
 		isUrlContainPath,
-		TreeView,
 	} from "$lib";
 	import { ListItem } from "fluent-svelte";
 	import Navigation from "~icons/fluent/navigation-24-regular";
@@ -63,14 +62,14 @@
 					srcset="/branding/logo-light.svg"
 				/>
 				<img
-					alt="Files logo"
+					alt="Scanning Bee logo"
 					class="logo-image"
 					height="32"
 					src="/branding/logo-light.svg"
 					width="32"
 				/>
 			</picture>
-			Files
+			Scanning Bee
 		</a>
 		{#if innerWidth > 648}
 			<div class="divider" />
@@ -141,18 +140,6 @@
 					</svelte:fragment>
 					<span>{name}</span>
 				</ListItem>
-			{:else}
-				<TreeView
-					on:click={toggleSidebar}
-					tree={[
-						{
-							title: name,
-							icon,
-							path: "",
-							pages: [...sidebarTree],
-						},
-					]}
-				/>
 			{/if}
 		{/each}
 		<hr />

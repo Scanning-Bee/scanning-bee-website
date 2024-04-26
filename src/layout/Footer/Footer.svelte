@@ -39,13 +39,13 @@
 					srcset="/branding/logo-light.svg"
 				/>
 				<img
-					alt="Files logo"
+					alt="Scanning Bee logo"
 					height="32"
 					src="/branding/logo-light.svg"
 					width="32"
 				/>
 			</picture>
-			Files
+			Scanning Bee
 		</a>
 		<div class="social-links">
 			<IconButton
@@ -65,22 +65,16 @@
 				{@html Discord}
 			</IconButton>
 		</div>
-		<p>
+		<!-- <p>
 			{$_("Copyright (c) {year} Files Community", {
 				values: { year: new Date().getFullYear() },
 			})}
-		</p>
+		</p> -->
 	</div>
 	<div class="column">
 		<p>Pages</p>
 		<Button variant="hyperlink" href="/">
 			{$_("footer.home", defaultI18nValues)}
-		</Button>
-		<Button variant="hyperlink" href="/docs">
-			{$_("footer.docs", defaultI18nValues)}
-		</Button>
-		<Button variant="hyperlink" href="/blog">
-			{$_("footer.news", defaultI18nValues)}
 		</Button>
 		<Button variant="hyperlink" href="/download">
 			{$_("footer.download", defaultI18nValues)}
@@ -95,10 +89,6 @@
 				.repo}/issues/new/choose"
 		>
 			{$_("footer.feedback", defaultI18nValues)}
-		</Button>
-
-		<Button variant="hyperlink" href="/docs/contributing/code-style">
-			{$_("footer.style_guide", defaultI18nValues)}
 		</Button>
 
 		<Button
