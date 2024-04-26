@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+	Uri="https://cdn.files.community/files/preview/Files.Package.appinstaller"
+	Version="2.3.45.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2018">
+	<MainBundle
+		Name="FilesPreview"
+		Version="2.3.45.0"
+		Publisher="CN=Yair Aichenbaum, O=Yair Aichenbaum, S=Washington, C=US"
+		Uri="https://cdn.files.community/files/preview/Files.Package_2.3.45.0_Sideload_Test/Files.Package_2.3.45.0_x64_Sideload.msixbundle" />
+	<Dependencies>
+		<Package
+			Name="Microsoft.WindowsAppRuntime.1.2-experimental2"
+			Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+			ProcessorArchitecture="x64"
+			Uri="https://cdn.files.community/files/preview/Files.Package_2.3.45.0_Sideload_Test/Dependencies/x64/Microsoft.WindowsAppRuntime.1.2-experimental2.msix"
+			Version="2000.616.1852.0" />
+		<Package
+			Name="Microsoft.VCLibs.140.00"
+			Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+			ProcessorArchitecture="x64"
+			Uri="https://cdn.files.community/files/preview/Files.Package_2.3.45.0_Sideload_Test/Dependencies/x64/Microsoft.VCLibs.x64.14.00.appx"
+			Version="14.0.30704.0" />
+		<Package
+			Name="Microsoft.VCLibs.140.00.UWPDesktop"
+			Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+			ProcessorArchitecture="x64"
+			Uri="https://cdn.files.community/files/preview/Files.Package_2.3.45.0_Sideload_Test/Dependencies/x64/Microsoft.VCLibs.x64.14.00.Desktop.appx"
+			Version="14.0.30704.0" />
+	</Dependencies>
+	<UpdateSettings>
+		<AutomaticBackgroundTask />
+	</UpdateSettings>
+</AppInstaller>
