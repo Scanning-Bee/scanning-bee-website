@@ -11,12 +11,14 @@
 
 {#if type === "Software Engineer" || type === "Advisor"}
 	<a tabindex="-1" class="contributor" href={html_url} {...externalLink}>
-		<PersonPicture
-			src={avatar_url}
-			size={64}
-			alt="{login}'s avatar"
-			loading="lazy"
-		/>
+		<div style="width: 64px !important; height: 64px !important;">
+			<PersonPicture
+				src={avatar_url}
+				size={64}
+				alt="{login}'s avatar"
+				loading="lazy"
+			/>
+		</div>
 		<div class="info">
 			<h5>{login}</h5>
 			<span>

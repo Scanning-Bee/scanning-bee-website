@@ -26,7 +26,7 @@ export const load = async ({ }) => {
 			type: "Software Engineer",
 		},
 		{
-			login: "M. Görkem Yiğit",
+			login: "Mehmet Görkem Yiğit",
 			avatar_url: "https://avatars.githubusercontent.com/u/85524625?v=4",
 			html_url: "https://github.com/GorkemYigit",
 			type: "Software Engineer",
@@ -44,16 +44,16 @@ export const load = async ({ }) => {
 			type: "Software Engineer",
 		},
 		{
-			login: "Baran Yancı",
-			avatar_url: "https://avatars.githubusercontent.com/u/73401941?v=4",
-			html_url: "https://github.com/y4nci",
-			type: "Software Engineer",
+			login: "Assoc. Prof. Hande Alemdar",
+			avatar_url: "https://user.ceng.metu.edu.tr/~alemdar/authors/admin/avatar_hu535661bce2c742bf7a0f6a055ac0b6d1_797901_250x250_fill_q90_lanczos_center.jpg",
+			html_url: "http://www.ceng.metu.edu.tr/~alemdar",
+			type: "Advisor",
 		},
 		{
-			login: "Baran Yancı",
-			avatar_url: "https://avatars.githubusercontent.com/u/73401941?v=4",
-			html_url: "https://github.com/y4nci",
-			type: "Software Engineer",
+			login: "Assoc. Prof. Erol Şahin",
+			avatar_url: "https://avesis.metu.edu.tr/user/image/1792",
+			html_url: "https://kovan.ceng.metu.edu.tr/~erol/",
+			type: "Advisor",
 		}
 	];
 

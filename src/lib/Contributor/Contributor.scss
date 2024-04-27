@@ -2,7 +2,7 @@
 
 .contributor {
 	@include flex($inline: true, $align: center, $gap: 1rem);
-	min-inline-size: 150px;
+	width: 250px;
 	padding: 1rem;
 	border: 1px solid var(--fds-card-stroke-default);
 	border-radius: var(--fds-control-corner-radius);
@@ -25,8 +25,8 @@
 		size: 1.2rem;
 		weight: normal;
 	}
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	/* text-overflow: ellipsis; */
+	white-space: initial;
 	overflow: hidden;
 
 	h5 {
