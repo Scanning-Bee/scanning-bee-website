@@ -20,8 +20,6 @@
 			<HeaderChip>{$_("home.team.chip", defaultI18nValues)}</HeaderChip>
 			<h2>{$_("home.team.title", defaultI18nValues)}</h2>
 			<p>{$_("home.team.description", defaultI18nValues)}</p>
-			<div class="buttons-spacer">
-			</div>
 		</div>
 		<div class="contributors-container">
 			<div class="contributors-row">

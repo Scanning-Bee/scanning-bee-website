@@ -5,25 +5,6 @@
 	import { _ } from "svelte-i18n";
 	import Github from "./icons/github.svg?raw";
 	import Discord from "./icons/discord.svg?raw";
-
-	const contributors = [
-		{
-			name: "Tropical",
-			link: "https://github.com/Tropix126/",
-		},
-		{
-			name: "TheOnlyTails",
-			link: "https://www.theonlytails.com/",
-		},
-		{
-			name: "Marcel Wagner",
-			link: "https://github.com/chingucoding/",
-		},
-		{
-			name: "Michael West",
-			link: "https://michaelwe.st/",
-		},
-	];
 </script>
 
 <PageSection type="footer" id="page-footer">
@@ -101,11 +82,6 @@
 	</div>
 	<div class="column">
 		<p>{$_("footer.web_team", defaultI18nValues)}</p>
-		{#each contributors as contributor}
-			<Button variant="hyperlink" href={contributor.link} {...externalLink}>
-				{contributor.name}
-			</Button>
-		{/each}
 	</div>
 </PageSection>
 

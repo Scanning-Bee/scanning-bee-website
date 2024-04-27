@@ -40,6 +40,9 @@
 		// Align descriptions to center
 		p {
 			margin-inline: 15ch;
+			@media screen and (width < 648px) {
+				margin-inline: 0;
+			}
 		}
 	}
 

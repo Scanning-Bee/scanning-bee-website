@@ -68,7 +68,7 @@
 	}
 
 	// HACK: --fds-solid-background-base is a fairly generic variable that makes more sense to style on themes other than default.
-	&:not(.theme-1) {
+	&:not(.theme-default) {
 		background-color: var(--fds-solid-background-base);
 		--dots-color: var(--fds-subtle-fill-tertiary);
 
@@ -90,7 +90,24 @@
 	// hex colors for our accent color, since we use hsl
 	// calcs. That really sucks. /rant
 	&.theme- {
-		&2 {
+		&light {
+			--fds-focus-stroke-outer: black;
+			--fds-accent-default: #F4AC18;
+			--fds-accent-secondary: #F4AC18;
+			--fds-accent-tertiary: #484848;
+			--fds-accent-text-primary: var(--fds-accent-default);
+			--fds-accent-text-tertiary: var(--fds-accent-secondary);
+			--fds-text-primary: #1A1A1A;
+			--fds-text-tertiary: #999999;
+			--fds-text-secondary: #999999;
+			--fds-subtle-fill-secondary: #F9F9F9;
+			--fds-subtle-fill-tertiary: #F0F0F0;
+			--fds-solid-background-base: #FFFFFF;
+			--fds-solid-background-quarternary: var(--fds-subtle-fill-secondary);
+			--dots-color: #4D4D4D;
+		}
+
+		&dark {
 			--fds-focus-stroke-outer: white;
 			--fds-accent-default: #F4AC18;
 			--fds-accent-secondary: #F9C62A;
@@ -107,7 +124,7 @@
 			--dots-color: #4D4D4D;
 		}
 
-		&3 {
+		&metu {
 			--fds-focus-stroke-outer: white;
 			--fds-accent-default: #F4AC18;
 			--fds-accent-secondary: #F9C62A;
@@ -126,9 +143,9 @@
 			--dots-color: #4D4D4D;
 		}
 
-		&4 {
+		&bees {
 			--fds-focus-stroke-outer: black;
-			--fds-accent-default: white;
+			--fds-accent-default: #990000;
 			--fds-accent-secondary: hsl(0, 0%, 100%, 0.8);
 			--fds-accent-tertiary: hsl(0, 0%, 100%, 0.6);
 			--fds-accent-text-primary: var(--fds-text-tertiary);

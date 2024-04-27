@@ -61,7 +61,7 @@
 			"bees": "Bees"
 		},
 		"team": {
-			"chip": "Meet the Team",
+			"chip": "Who are we?",
 			"title": "Meet the team behind {AppName}.",
 			"description": "{AppName} is developed and maintained by a team of passionate developers who are dedicated to creating the best possible experience for our users. Get to know the people behind the app and learn more about their backgrounds and expertise.",
 			"softwareEngineer": "Software Engineer",

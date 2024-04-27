@@ -27,7 +27,6 @@
 
 		p {
 			margin-inline: 15ch;
-			margin-block: 12px 24px;
 			color: var(--fds-text-secondary);
 			font: {
 				size: 1.6rem;
@@ -36,6 +35,9 @@
 			line-height: 1.65;
 			@media (prefers-color-scheme: dark) {
 				color: var(--fds-text-tertiary);
+			}
+			@media screen and (width < 648px) {
+				margin-inline: 0;
 			}
 		}
 
