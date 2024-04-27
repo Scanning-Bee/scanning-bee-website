@@ -54,6 +54,12 @@
 				"description": "{AppName} uses cutting-edge AI technology to detect and analyze cells in your hive. Get accurate and reliable results every time."
 			}
 		},
+		"themes": {
+			"light": "Light",
+			"dark": "Dark",
+			"metu": "METU",
+			"bees": "Bees"
+		},
 		"team": {
 			"chip": "Meet the Team",
 			"title": "Meet the team behind {AppName}.",

@@ -5,6 +5,7 @@ export type FeatureCardData = {
 	title: string;
 	description: string;
 	icon: typeof SvelteComponent<SvelteHTMLElements["svg"]>;
+	customizable?: boolean;
 };
 
 export type Tag = {

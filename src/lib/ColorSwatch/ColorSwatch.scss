@@ -1,12 +1,12 @@
 :global {
 	.color-swatch {
-		margin: 0;
+		margin: 5px;
 		appearance: none;
 
 		&.type- {
 			&standard {
-				inline-size: 72px;
-				block-size: 72px;
+				inline-size: 30px;
+				block-size: 30px;
 				border-radius: var(--fds-control-corner-radius);
 				overflow: hidden;
 

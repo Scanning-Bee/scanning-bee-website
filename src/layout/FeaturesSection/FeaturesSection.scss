@@ -14,6 +14,12 @@
 	}
 }
 
+.features-section-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 // <FeatureCard /> container
 // Container element for selecting features to preview
 .feature-cards-container {
