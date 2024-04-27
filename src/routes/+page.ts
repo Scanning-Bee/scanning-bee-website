@@ -59,8 +59,6 @@ export const load = async ({ }) => {
 
 	const repeatedData = Array.from({ length: 100 }, (_, i) => data[i % data.length]);
 
-	console.log(repeatedData);
-
 	return {
 		contributors: repeatedData,
 	};
