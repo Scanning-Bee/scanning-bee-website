@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { _ } from "svelte-i18n";
 
-	import type { FeatureCardData } from "$data/features";
 	import {
 		defaultI18nValues,
 		entries,
@@ -10,84 +9,82 @@
 		PageSection,
 	} from "$lib";
 
-	import Cloud from "~icons/fluent/cloud-24-regular";
-	import EyeVisible from "~icons/fluent/eye-20-regular";
-	import Archive from "~icons/fluent/folder-zip-24-regular";
-	import Columns from "~icons/fluent/panel-left-28-regular";
-	import TabDesktop from "~icons/fluent/tab-desktop-20-regular";
-	import Tag from "~icons/fluent/tag-24-regular";
-	import Branch from "~icons/fluent/branch-24-regular";
-	import Hash from "~icons/fluent/number-symbol-24-regular";
-	import Diamond from "~icons/fluent/diamond-24-regular";
-	import PanelRight from "~icons/fluent/panel-right-24-regular";
-
-	export const featureCards = {
-		/* tabs: {
-			title: $_("home.features.tabs.title", defaultI18nValues),
-			description: $_("home.features.tabs.description", defaultI18nValues),
-			icon: TabDesktop,
-		}, */
-		beehive: {
-			title: $_("home.features.beehive.title", defaultI18nValues),
-			description: $_("home.features.beehive.description", defaultI18nValues),
-			icon: Cloud,
+	import type { Technology } from '$data/technologies';
+	
+	const technologies: Technology[] = [
+		{
+			name: "React",
+			src: "/ui/technologies/react.png",
+			link: "https://reactjs.org/",
 		},
-		aiDetection: {
-			title: $_("home.features.aiDetection.title", defaultI18nValues),
-			description: $_("home.features.aiDetection.description", defaultI18nValues),
-			icon: EyeVisible,
+		{
+			name: "TypeScript",
+			src: "/ui/technologies/ts.png",
+			link: "https://www.typescriptlang.org/",
 		},
-		database: {
-			title: $_("home.features.database.title", defaultI18nValues),
-			description: $_("home.features.database.description", defaultI18nValues),
-			icon: Archive,
+		{
+			name: "Electron",
+			src: "/ui/technologies/electron.png",
+			link: "https://www.electronjs.org/",
 		},
-		annotate: {
-			title: $_("home.features.annotate.title", defaultI18nValues),
-			description: $_("home.features.annotate.description", defaultI18nValues),
-			icon: Columns,
+		{
+			name: "Django",
+			src: "/ui/technologies/django.png",
+			link: "https://www.djangoproject.com/",
 		},
-		preview: {
-			title: $_("home.features.preview.title", defaultI18nValues),
-			description: $_("home.features.preview.description", defaultI18nValues),
-			icon: TabDesktop,
+		{
+			name: "Docker",
+			src: "/ui/technologies/docker.png",
+			link: "https://www.docker.com/",
 		},
-		security: {
-			title: $_("home.features.security.title", defaultI18nValues),
-			description: $_("home.features.security.description", defaultI18nValues),
-			icon: Tag,
+		{
+			name: "Python",
+			src: "/ui/technologies/python.png",
+			link: "https://www.python.org/",
 		},
-		userModes: {
-			title: $_("home.features.userModes.title", defaultI18nValues),
-			description: $_("home.features.userModes.description", defaultI18nValues),
-			icon: Branch,
+		{
+			name: "OpenCV",
+			src: "/ui/technologies/opencv.png",
+			link: "https://opencv.org/",
 		},
-		statistics: {
-			title: $_("home.features.statistics.title", defaultI18nValues),
-			description: $_("home.features.statistics.description", defaultI18nValues),
-			icon: Hash,
+		{
+			name: "YOLO",
+			src: "/ui/technologies/yolo.png",
+			link: "https://pjreddie.com/darknet/yolo/",
 		},
-		themes: {
-			title: $_("home.features.themes.title", defaultI18nValues),
-			description: $_("home.features.themes.description", defaultI18nValues),
-			icon: Diamond,
-		},
-	} as const satisfies { [name: string]: FeatureCardData };
+		{
+			name: "NumPy",
+			src: "/ui/technologies/numpy.png",
+			link: "https://numpy.org/",
+		}
+	];
 </script>
 
-<PageSection id="features-section">
-	<div class="features-section-right">
-		<HeaderChip>{$_("home.features.chip")}</HeaderChip>
-		<h2>{$_("home.features.title")}</h2>
-		<p>{$_("home.features.description", defaultI18nValues)}</p>
+<PageSection id="technologies-section">
+	<div class="technologies-section-right">
+		<div class="technologies-section-text">
+			<HeaderChip>{$_("home.technologies.chip", defaultI18nValues)}</HeaderChip>
+			<h2>{$_("home.technologies.title", defaultI18nValues)}</h2>
+			<p>{$_("home.technologies.description", defaultI18nValues)}</p>
+		</div>
 		<hr />
-		<div class="feature-cards-container">
-			{#each entries(featureCards) as [id, feature] (id)}
-				<FeatureCard description={feature.description}>
-					<svelte:component this={feature.icon} slot="icon" />
-					{feature.title}
-				</FeatureCard>
-			{/each}
+		<div class="technologies-grid-section">
+			<div class="technologies-grid">
+				{#each technologies as { name, src, link }, i}
+					<a
+						href={link}
+						rel="noopener noreferrer"
+						class="technology-link"
+					>
+						<img
+							class="technology-image"
+							src={src}
+							alt={name}
+							title={name}
+						/>
+					</a>
+				{/each}
+			</div>
 		</div>
 	</div>
 </PageSection>

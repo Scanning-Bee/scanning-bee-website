@@ -66,6 +66,32 @@
 			"description": "{AppName} is developed and maintained by a team of passionate developers who are dedicated to creating the best possible experience for our users. Get to know the people behind the app and learn more about their backgrounds and expertise.",
 			"softwareEngineer": "Software Engineer",
 			"advisor": "Advisor"
+		},
+		"technologies": {
+			"chip": "Tech Stack",
+			"title": "Built with the latest technologies.",
+			"description": "{AppName} is built with the latest technologies to provide you with a fast, reliable, and secure experience. We use cutting-edge technologies to ensure that you have the best possible experience and seamless communication between every layer of our application.",
+			"frontend": {
+				"title": "Frontend",
+				"description": "Our frontend is built with React, a popular JavaScript library for building user interfaces. React allows us to create fast, interactive, and dynamic user interfaces that are easy to use and highly customizable."
+			},
+			"backend": {
+				"title": "Backend",
+				"description": "Our backend is built with Node.js, a powerful JavaScript runtime that allows us to build fast, scalable, and reliable server-side applications. Node.js enables us to handle a large number of requests and process data quickly and efficiently."
+			},
+			"database": {
+				"title": "Database",
+				"description": "Our database is built with MongoDB, a popular NoSQL database that is designed for scalability, flexibility, and performance. MongoDB allows us to store and retrieve data quickly and efficiently, making it ideal for our application."
+			},
+			"ai": {
+				"title": "AI",
+				"description": "Our AI is built with TensorFlow, a popular machine learning library that is designed for building and training deep learning models. TensorFlow enables us to create accurate and reliable AI models that can detect and analyze cells in your hive."
+			}
+		},
+		"demo": {
+			"chip": "Demo",
+			"title": "See {AppName} in action.",
+			"description": "Watch a demo of {AppName} to see how it works and what it can do for you. {AppName} is designed to be easy to use and highly customizable, so you can monitor your beehive with ease and keep track of everything that's happening inside."
 		}
 	},
 	"footer": {

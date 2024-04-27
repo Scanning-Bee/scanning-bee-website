@@ -1,0 +1,29 @@
+@use "src/styles/mixins" as *;
+
+// Center our buttons
+:global(#demo-section .buttons-spacer) {
+	justify-content: center;
+}
+
+.demo-section- {
+	// Since we need to always contrast against a
+	// light-ish background, we'll need to hardcode
+	// some variables.
+	&text {
+		text-align: center;
+
+		p {
+			margin-inline: 15ch;
+			@media screen and (width < 648px) {
+				margin-inline: 0;
+			}
+		}
+	}
+
+	&video {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+}

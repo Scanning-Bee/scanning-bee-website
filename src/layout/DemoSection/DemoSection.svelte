@@ -1,0 +1,30 @@
+<script lang="ts">
+	import { Contributor, HeaderChip, PageSection, defaultI18nValues } from '$lib';
+	import { _ } from 'svelte-i18n';
+</script>
+
+<PageSection id="demo-section">
+	<div class="demo-section-video">
+		<div class="demo-section-text">
+			<HeaderChip>{$_("home.demo.chip", defaultI18nValues)}</HeaderChip>
+			<h2>{$_("home.demo.title", defaultI18nValues)}</h2>
+			<p>{$_("home.demo.description", defaultI18nValues)}</p>
+		</div>
+		<hr />
+		<iframe
+			class="demo-section-video"
+			width="560"
+			height="315"
+			src="https://www.youtube.com/embed/P4hj0zYlYDQ?si=Z-5Oqvu8yYn6ENbP"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			allowfullscreen
+		></iframe>
+	</div>
+</PageSection>
+
+<style lang="scss">
+	@use "./DemoSection";
+</style>
