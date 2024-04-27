@@ -19,14 +19,8 @@
 	import Branch from "~icons/fluent/branch-24-regular";
 	import Hash from "~icons/fluent/number-symbol-24-regular";
 	import Diamond from "~icons/fluent/diamond-24-regular";
-	import PanelRight from "~icons/fluent/panel-right-24-regular";
 
 	export const featureCards = {
-		/* tabs: {
-			title: $_("home.features.tabs.title", defaultI18nValues),
-			description: $_("home.features.tabs.description", defaultI18nValues),
-			icon: TabDesktop,
-		}, */
 		beehive: {
 			title: $_("home.features.beehive.title", defaultI18nValues),
 			description: $_("home.features.beehive.description", defaultI18nValues),
@@ -83,8 +77,7 @@
 		<hr />
 		<div class="feature-cards-container">
 			{#each entries(featureCards) as [id, feature] (id)}
-				<FeatureCard description={feature.description}>
-					<svelte:component this={feature.icon} slot="icon" />
+				<FeatureCard description={feature.description} icon={feature.icon}>
 					{feature.title}
 				</FeatureCard>
 			{/each}
