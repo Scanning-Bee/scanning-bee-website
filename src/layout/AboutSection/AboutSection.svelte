@@ -14,7 +14,15 @@
 	<h2>{$_("home.about.title", defaultI18nValues)}</h2>
 	<p>{$_("home.about.description", defaultI18nValues)}</p>
 	<div class="buttons-spacer">
-		<Button href={`${base}/download/`} variant="accent">
+		<Button
+			href={`${base}/#download/`}
+			variant="accent"
+			on:click={() => {
+				document
+					.getElementById("download-section")
+					?.scrollIntoView({ behavior: "smooth" });
+			}}
+		>
 			{$_("home.about.download", defaultI18nValues)}
 		</Button>
 	</div>

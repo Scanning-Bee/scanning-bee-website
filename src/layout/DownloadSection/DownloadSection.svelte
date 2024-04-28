@@ -43,10 +43,6 @@
 	};
 </script>
 
-<Metadata title="Files • Download" image="download" />
-
-<slot />
-
 <PageSection id="download-section">
 	<div class="download-section-text">
 		<HeaderChip>{$_("home.download.chip", defaultI18nValues)}</HeaderChip>

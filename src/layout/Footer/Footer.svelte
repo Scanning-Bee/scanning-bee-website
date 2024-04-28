@@ -40,7 +40,7 @@
 		<Button variant="hyperlink" href={base}>
 			{$_("footer.home", defaultI18nValues)}
 		</Button>
-		<Button variant="hyperlink" href={base + "/download"}>
+		<Button variant="hyperlink" href={base + "/#download"}>
 			{$_("footer.download", defaultI18nValues)}
 		</Button>
 	</div>
