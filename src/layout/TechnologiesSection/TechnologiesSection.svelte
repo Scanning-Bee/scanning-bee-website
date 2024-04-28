@@ -9,54 +9,55 @@
 		PageSection,
 	} from "$lib";
 
-	import type { Technology } from '$data/technologies';
-	
+	import { base } from "$app/paths";
+	import type { Technology } from "$data/technologies";
+
 	const technologies: Technology[] = [
 		{
 			name: "React",
-			src: "/ui/technologies/react.png",
+			src: base + "/ui/technologies/react.png",
 			link: "https://reactjs.org/",
 		},
 		{
 			name: "TypeScript",
-			src: "/ui/technologies/ts.png",
+			src: base + "/ui/technologies/ts.png",
 			link: "https://www.typescriptlang.org/",
 		},
 		{
 			name: "Electron",
-			src: "/ui/technologies/electron.png",
+			src: base + "/ui/technologies/electron.png",
 			link: "https://www.electronjs.org/",
 		},
 		{
 			name: "Django",
-			src: "/ui/technologies/django.png",
+			src: base + "/ui/technologies/django.png",
 			link: "https://www.djangoproject.com/",
 		},
 		{
 			name: "Docker",
-			src: "/ui/technologies/docker.png",
+			src: base + "/ui/technologies/docker.png",
 			link: "https://www.docker.com/",
 		},
 		{
 			name: "Python",
-			src: "/ui/technologies/python.png",
+			src: base + "/ui/technologies/python.png",
 			link: "https://www.python.org/",
 		},
 		{
 			name: "OpenCV",
-			src: "/ui/technologies/opencv.png",
+			src: base + "/ui/technologies/opencv.png",
 			link: "https://opencv.org/",
 		},
 		{
 			name: "YOLO",
-			src: "/ui/technologies/yolo.png",
+			src: base + "/ui/technologies/yolo.png",
 			link: "https://pjreddie.com/darknet/yolo/",
 		},
 		{
 			name: "NumPy",
-			src: "/ui/technologies/numpy.png",
+			src: base + "/ui/technologies/numpy.png",
 			link: "https://numpy.org/",
-		}
+		},
 	];
 </script>
 
@@ -71,17 +72,8 @@
 		<div class="technologies-grid-section">
 			<div class="technologies-grid">
 				{#each technologies as { name, src, link }, i}
-					<a
-						href={link}
-						rel="noopener noreferrer"
-						class="technology-link"
-					>
-						<img
-							class="technology-image"
-							src={src}
-							alt={name}
-							title={name}
-						/>
+					<a href={link} rel="noopener noreferrer" class="technology-link">
+						<img class="technology-image" {src} alt={name} title={name} />
 					</a>
 				{/each}
 			</div>

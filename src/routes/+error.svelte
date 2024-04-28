@@ -3,6 +3,8 @@
 	import { Metadata } from "$lib";
 	import { page } from "$app/stores";
 
+	import { base } from "$app/paths";
+
 	const draggableOptions: DragOptions = {
 		bounds: "parent",
 		handle: ".titlebar",
@@ -23,7 +25,7 @@
 		</div>
 		<div class="window-body">
 			<div class="error-inner">
-				<img alt="Error icon" src="/ui/icons/98-error.png" />
+				<img alt="Error icon" src={base + "/ui/icons/98-error.png"} />
 				<div class="error-message">
 					<p>
 						Uh Oh! Something went wrong while loading this page.
@@ -33,7 +35,7 @@
 				</div>
 			</div>
 			<footer>
-				<a href="/">
+				<a href={base}>
 					<button>Return Home</button>
 				</a>
 			</footer>

@@ -1,7 +1,6 @@
 {
-	"name": "files-community",
+	"name": "scanning-bee-website",
 	"version": "0.0.1",
-	"repository": "https://github.com/files-community/files",
 	"scripts": {
 		"dev": "vite dev --host",
 		"build": "vite build",
@@ -16,7 +15,7 @@
 		"@fec/remark-a11y-emoji": "^4.0.2",
 		"@iconify-json/fluent": "^1.1.52",
 		"@neodrag/svelte": "^2.0.5",
-		"@sveltejs/adapter-cloudflare": "^4.4.0",
+		"@sveltejs/adapter-static": "^1.0.0",
 		"@sveltejs/kit": "^2.5.6",
 		"@sveltejs/vite-plugin-svelte": "^3.1.0",
 		"@types/eslint": "^8.56.10",

@@ -18,6 +18,15 @@ export default defineConfig({
 		},
 	},
 	build: {
+		rollupOptions: {
+			output: {
+				// Prevent Vite from splitting the code into multiple chunks
+				manualChunks: () => "everything.js",
+			},
+		},
+		// Force all CSS into the JavaScript bundle
+		cssCodeSplit: false,
+		assetsDir: "",
 		cssMinify: "lightningcss",
 	},
 });

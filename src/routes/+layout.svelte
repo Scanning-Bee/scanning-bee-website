@@ -16,33 +16,35 @@
 	import Download from "~icons/fluent/arrow-download-24-regular";
 	import { afterNavigate, onNavigate } from "$app/navigation";
 	import { onMount } from "svelte";
-	import type { NavbarButton, NavbarItem } from '$data/links';
+	import type { NavbarButton, NavbarItem } from "$data/links";
+
+	import { base } from "$app/paths";
 	// import PaintBrush from "~icons/fluent/paint-brush-24-regular";
 
 	const navbarItems: NavbarItem[] = [
 		{
 			name: $_("navbar.home", defaultI18nValues),
-			path: "/",
+			path: base + "/",
 			icon: Home,
 		},
 		{
 			name: $_("navbar.features"),
-			path: "/#features",
+			path: base + "/#features",
 			icon: Book,
 		},
 		{
 			name: $_("navbar.technologies"),
-			path: "/#technologies",
+			path: base + "/#technologies",
 			icon: Code,
 		},
 		{
 			name: $_("navbar.team"),
-			path: "/#team",
+			path: base + "/#team",
 			icon: Team,
 		},
 		{
 			name: $_("navbar.download"),
-			path: "/download",
+			path: base + "/download",
 			icon: Download,
 		},
 	];
@@ -51,13 +53,13 @@
 		{
 			name: $_("navbar.ceng", defaultI18nValues),
 			href: "https://ceng.metu.edu.tr/",
-			imageSrc: "/logos/ceng.png",
+			imageSrc: base + "/logos/ceng.png",
 			external: true,
 		},
 		{
 			name: $_("navbar.metu", defaultI18nValues),
 			href: "https://metu.edu/",
-			imageSrc: "/logos/metu.png",
+			imageSrc: base + "/logos/metu.png",
 			external: true,
 		},
 		/* {
@@ -86,7 +88,7 @@
 	<meta content="website" name="og:type" />
 
 	<link
-		href="/branding/logo{$page.route.id === 'themes'
+		href="{base}/branding/logo{$page.route.id === 'themes'
 			? '-themes'
 			: ''}-light.svg"
 		rel="icon"
@@ -94,7 +96,9 @@
 		media="(prefers-color-scheme: light)"
 	/>
 	<link
-		href="/branding/logo{$page.route.id === 'themes' ? '-themes' : ''}-dark.svg"
+		href="{base}/branding/logo{$page.route.id === 'themes'
+			? '-themes'
+			: ''}-dark.svg"
 		rel="icon"
 		type="image/svg+xml"
 		media="(prefers-color-scheme: dark)"

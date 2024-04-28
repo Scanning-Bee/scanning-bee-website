@@ -4,24 +4,26 @@
 	import { _ } from "svelte-i18n";
 	import Github from "./icons/github.svg?raw";
 	import Discord from "./icons/discord.svg?raw";
+
+	import { base } from "$app/paths";
 </script>
 
 <PageSection type="footer" id="page-footer">
 	<div class="column">
-		<a class="logo" href="/">
+		<a class="logo" href={base}>
 			<picture>
 				<source
 					media="(prefers-color-scheme: dark)"
-					srcset="/branding/logo-dark.svg"
+					srcset={base + "/branding/logo-dark.svg"}
 				/>
 				<source
 					media="(prefers-color-scheme: light)"
-					srcset="/branding/logo-light.svg"
+					srcset={base + "/branding/logo-light.svg"}
 				/>
 				<img
 					alt="Scanning Bee logo"
 					height="32"
-					src="/branding/logo-light.svg"
+					src={base + "/branding/logo-light.svg"}
 					width="32"
 				/>
 			</picture>
@@ -35,10 +37,10 @@
 	</div>
 	<div class="column">
 		<p>Pages</p>
-		<Button variant="hyperlink" href="/">
+		<Button variant="hyperlink" href={base}>
 			{$_("footer.home", defaultI18nValues)}
 		</Button>
-		<Button variant="hyperlink" href="/download">
+		<Button variant="hyperlink" href={base + "/download"}>
 			{$_("footer.download", defaultI18nValues)}
 		</Button>
 	</div>
@@ -51,18 +53,10 @@
 		>
 			METU CENG
 		</Button>
-		<Button
-			{...externalLink}
-			href="https://metu.edu/"
-			variant="hyperlink"
-		>
+		<Button {...externalLink} href="https://metu.edu/" variant="hyperlink">
 			METU
 		</Button>
-		<Button
-			{...externalLink}
-			href="https://roboroyale.eu/"
-			variant="hyperlink"
-		>
+		<Button {...externalLink} href="https://roboroyale.eu/" variant="hyperlink">
 			RoboRoyale
 		</Button>
 	</div>

@@ -2,15 +2,13 @@
 	import { navigating, page } from "$app/stores";
 	import type { NavbarButton, NavbarItem } from "$data/links";
 	import { _ } from "svelte-i18n";
-	import {
-		defaultI18nValues,
-		externalLink,
-		isUrlContainPath,
-	} from "$lib";
+	import { defaultI18nValues, externalLink, isUrlContainPath } from "$lib";
 	import { ListItem } from "fluent-svelte";
 	import Navigation from "~icons/fluent/navigation-24-regular";
 	import type { SvelteComponent } from "svelte";
 	import type { SvelteHTMLElements } from "svelte/elements";
+
+	import { base } from "$app/paths";
 
 	export let items: NavbarItem[] = [];
 	export let buttons: NavbarButton[] = [];
@@ -47,25 +45,25 @@
 		console.log(hash);
 
 		// ignore if the link is not an anchor
-		if (!hash.startsWith('#')) {
+		if (!hash.startsWith("#")) {
 			window.location.href = link.href;
 			return;
 		}
 
 		window.location.href = link.href;
 
-		const anchorId = hash.replace('#', '');
+		const anchorId = hash.replace("#", "");
 		const anchor = document.getElementById(`${anchorId}-section`);
 
 		if (!anchor) return;
 
 		window.scrollTo({
 			top: anchor.offsetTop,
-			behavior: 'smooth'
+			behavior: "smooth",
 		});
 
-		window.history.pushState(null, '', hash);
-	}
+		window.history.pushState(null, "", hash);
+	};
 
 	$: {
 		$navigating && (sidebarVisible = false);
@@ -76,21 +74,21 @@
 
 <header class="navbar">
 	<nav class="inner">
-		<a class="logo" href="/">
+		<a class="logo" href={base}>
 			<picture>
 				<source
 					media="(prefers-color-scheme: dark)"
-					srcset="/branding/logo-dark.svg"
+					srcset={base + "/branding/logo-dark.svg"}
 				/>
 				<source
 					media="(prefers-color-scheme: light)"
-					srcset="/branding/logo-light.svg"
+					srcset={base + "/branding/logo-light.svg"}
 				/>
 				<img
 					alt="Scanning Bee logo"
 					class="logo-image"
 					height="32"
-					src="/branding/logo-light.svg"
+					src={base + "/branding/logo-light.svg"}
 					width="32"
 				/>
 			</picture>
@@ -130,11 +128,7 @@
 					{...externalLink}
 				>
 					{#if imageSrc}
-						<img
-							alt={name}
-							class="button-image"
-							src={imageSrc}
-						/>
+						<img alt={name} class="button-image" src={imageSrc} />
 					{/if}
 				</a>
 			{/each}
@@ -179,11 +173,7 @@
 			<ListItem {href} type="navigation" {...externalLink}>
 				<svelte:fragment slot="icon">
 					{#if imageSrc}
-						<img
-							alt={name}
-							class="button-image"
-							src={imageSrc}
-						/>
+						<img alt={name} class="button-image" src={imageSrc} />
 					{/if}
 				</svelte:fragment>
 				<span>{name}</span>

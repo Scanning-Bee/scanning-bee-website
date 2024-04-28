@@ -2,6 +2,7 @@
 	import { onNavigate } from "$app/navigation";
 	import { externalLink } from "$lib";
 	import { date as dateFormat } from "svelte-i18n";
+	import { base } from "$app/paths";
 
 	export let slug = "";
 	export let date = "";
@@ -13,7 +14,7 @@
 	let postThumbnail: HTMLImageElement;
 </script>
 
-<a class="blog-card" href="/blog/posts/{slug}" {...$$restProps}>
+<a class="blog-card" href="{base}/blog/posts/{slug}" {...$$restProps}>
 	<img
 		alt="{title} thumbnail"
 		class="thumbnail"

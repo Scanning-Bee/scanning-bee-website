@@ -5,7 +5,7 @@ export type ContributorData = {
 	type: "Software Engineer" | "Advisor";
 };
 
-export const load = async ({ }) => {
+export const load = async ({}) => {
 	const data: ContributorData[] = [
 		{
 			login: "Baran Yancı",
@@ -39,7 +39,8 @@ export const load = async ({ }) => {
 		},
 		{
 			login: "Assoc. Prof. Hande Alemdar",
-			avatar_url: "https://user.ceng.metu.edu.tr/~alemdar/authors/admin/avatar_hu535661bce2c742bf7a0f6a055ac0b6d1_797901_250x250_fill_q90_lanczos_center.jpg",
+			avatar_url:
+				"https://user.ceng.metu.edu.tr/~alemdar/authors/admin/avatar_hu535661bce2c742bf7a0f6a055ac0b6d1_797901_250x250_fill_q90_lanczos_center.jpg",
 			html_url: "http://www.ceng.metu.edu.tr/~alemdar",
 			type: "Advisor",
 		},
@@ -48,12 +49,17 @@ export const load = async ({ }) => {
 			avatar_url: "https://avesis.metu.edu.tr/user/image/1792",
 			html_url: "https://kovan.ceng.metu.edu.tr/~erol/",
 			type: "Advisor",
-		}
+		},
 	];
 
-	const repeatedData = Array.from({ length: 100 }, (_, i) => data[i % data.length]);
+	const repeatedData = Array.from(
+		{ length: 100 },
+		(_, i) => data[i % data.length],
+	);
 
 	return {
 		contributors: repeatedData,
 	};
 };
+
+export const prerender = true;

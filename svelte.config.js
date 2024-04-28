@@ -1,5 +1,5 @@
 import remarkA11yEmoji from "@fec/remark-a11y-emoji";
-import adapter from "@sveltejs/adapter-cloudflare";
+import adapter from "@sveltejs/adapter-static";
 import { mdsvex } from "mdsvex";
 import rehypeColorPreview from "rehype-color-preview";
 import remarkGfm from "remark-gfm";
@@ -17,6 +17,12 @@ const config = {
 			$i18n: "src/i18n",
 		},
 		adapter: adapter(),
+		paths: {
+			base: "/scanning-bee",
+		},
+		prerender: {
+			handleMissingId: "ignore",
+		},
 	},
 	preprocess: [
 		mdsvex({

@@ -6,38 +6,31 @@
 	import type { DownloadSource } from "./types";
 	import { _ } from "svelte-i18n";
 
+	import { base } from "$app/paths";
+
 	const downloadSources = [
 		{
 			name: $_("download.windows.title", defaultI18nValues),
-			description: $_(
-				"download.windows.description",
-				defaultI18nValues
-			),
+			description: $_("download.windows.description", defaultI18nValues),
 			href: `ms-windows-store://pdp/?ProductId=9nghp3dx8hdx&cid=FilesWebsite`,
-			icon: "/download-sources/windows.svg",
-			darkModeIcon: "/download-sources/windows.svg",
+			icon: base + "/download-sources/windows.svg",
+			darkModeIcon: base + "/download-sources/windows.svg",
 			external: true,
 		},
 		{
 			name: $_("download.mac.title", defaultI18nValues),
-			description: $_(
-				"download.mac.description",
-				defaultI18nValues
-			),
+			description: $_("download.mac.description", defaultI18nValues),
 			href: `ms-windows-store://pdp/?ProductId=9nghp3dx8hdx&cid=FilesWebsite`,
-			icon: "/download-sources/mac_black.svg",
-			darkModeIcon: "/download-sources/mac_white.svg",
+			icon: base + "/download-sources/mac_black.svg",
+			darkModeIcon: base + "/download-sources/mac_white.svg",
 			external: true,
 		},
 		{
 			name: $_("download.source.title", defaultI18nValues),
-			description: $_(
-				"download.source.description",
-				defaultI18nValues
-			),
+			description: $_("download.source.description", defaultI18nValues),
 			href: `ms-windows-store://pdp/?ProductId=9nghp3dx8hdx&cid=FilesWebsite`,
-			icon: "/download-sources/source_code.svg",
-			darkModeIcon: "/download-sources/source_code.svg",
+			icon: base + "/download-sources/source_code.svg",
+			darkModeIcon: base + "/download-sources/source_code.svg",
 			external: true,
 		},
 	] as const satisfies readonly DownloadSource[];
