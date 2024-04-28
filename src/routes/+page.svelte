@@ -6,6 +6,7 @@
 		TechnologiesSection,
 		DemoSection,
 	} from "$layout";
+	import DownloadSection from "$layout/DownloadSection/DownloadSection.svelte";
 	import { defaultI18nValues, Metadata } from "$lib";
 	import { _ } from "svelte-i18n";
 
@@ -24,3 +25,5 @@
 <TeamSection {contributors} />
 
 <DemoSection />
+
+<DownloadSection />

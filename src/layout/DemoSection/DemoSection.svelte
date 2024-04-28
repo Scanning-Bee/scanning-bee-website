@@ -1,6 +1,11 @@
 <script lang="ts">
-	import { Contributor, HeaderChip, PageSection, defaultI18nValues } from '$lib';
-	import { _ } from 'svelte-i18n';
+	import {
+		Contributor,
+		HeaderChip,
+		PageSection,
+		defaultI18nValues,
+	} from "$lib";
+	import { _ } from "svelte-i18n";
 </script>
 
 <PageSection id="demo-section">
@@ -9,8 +14,8 @@
 			<HeaderChip>{$_("home.demo.chip", defaultI18nValues)}</HeaderChip>
 			<h2>{$_("home.demo.title", defaultI18nValues)}</h2>
 			<p>{$_("home.demo.description", defaultI18nValues)}</p>
+			<hr />
 		</div>
-		<hr />
 		<iframe
 			class="demo-section-player"
 			src="https://www.youtube.com/embed/P4hj0zYlYDQ?si=Z-5Oqvu8yYn6ENbP"

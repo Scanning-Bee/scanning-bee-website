@@ -4,5 +4,6 @@ export { default as FeaturesSection } from "./FeaturesSection/FeaturesSection.sv
 export { default as TechnologiesSection } from "./TechnologiesSection/TechnologiesSection.svelte";
 export { default as DemoSection } from "./DemoSection/DemoSection.svelte";
 export { default as TeamSection } from "./TeamSection/TeamSection.svelte";
+export { default as DownloadSection } from "./DownloadSection/DownloadSection.svelte";
 export { default as Navbar } from "./Navbar/Navbar.svelte";
 export { default as Footer } from "./Footer/Footer.svelte";

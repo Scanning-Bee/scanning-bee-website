@@ -92,6 +92,11 @@
 			"chip": "Demo",
 			"title": "See {AppName} in action.",
 			"description": "Watch a demo of {AppName} to see how it works and what it can do for you. {AppName} is designed to be easy to use and highly customizable, so you can monitor your beehive with ease and keep track of everything that's happening inside."
+		},
+		"download": {
+			"chip": "Download",
+			"title": "Get started with {AppName} today.",
+			"description": "Download the latest version of {AppName} for Windows, macOS, or Linux and start monitoring your beehive with ease. {AppName} is free and open source, so you can use it without any restrictions and customize it to suit your needs."
 		}
 	},
 	"footer": {
@@ -114,8 +119,6 @@
 	},
 	"download": {
 		"title": "Download {AppName}",
-		"donation_description": "{AppName} is a community-driven project that depends on your support to grow and improve. Please consider purchasing {AppName} through the Microsoft Store or supporting us on GitHub if you use the classic installer.",
-		"donation_button": "Donate",
 		"windows": {
 			"title": "Download for Windows",
 			"description": "Download the latest version of {AppName} for Windows. Requires Windows 10 or later."

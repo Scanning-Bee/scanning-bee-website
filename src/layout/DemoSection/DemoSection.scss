@@ -1,5 +1,11 @@
 @use "src/styles/mixins" as *;
 
+:global {
+	#demo-section {
+		background-color: var(--fds-solid-background-base);
+	}
+}
+
 // Center our buttons
 :global(#demo-section .buttons-spacer) {
 	justify-content: center;

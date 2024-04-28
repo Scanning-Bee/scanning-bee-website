@@ -1,0 +1,103 @@
+@use "src/styles/mixins" as *;
+
+:global {
+	#download-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
+		gap: 2rem;
+		padding: 2rem;
+		margin-inline: auto;
+
+		inline-size: fit-content;
+
+		.page-section-inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.download-sources {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+
+			> p {
+				text-align: center;
+			}
+		}
+	}
+}
+
+.download-section-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.download-section- {
+	// Since we need to always contrast against a
+	// light-ish background, we'll need to hardcode
+	// some variables.
+	&text {
+		text-align: center;
+
+		p {
+			margin-inline: 15ch;
+			@media screen and (width < 648px) {
+				margin-inline: 0;
+			}
+		}
+	}
+}
+
+.download-source {
+	max-width: 700px;
+	border-radius: var(--fds-control-corner-radius);
+	border: 1px solid var(--fds-card-stroke-default);
+	box-shadow: var(--fds-card-shadow);
+	transition: var(--fds-control-normal-duration) ease;
+	background: var(--fds-card-background-default);
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: row;
+	place-items: center;
+	padding: 3rem 6rem;
+
+	@media (prefers-reduced-motion: no-preference) {
+		&:hover {
+			box-shadow: var(--fds-flyout-shadow);
+			transform: translateY(-2px);
+
+			.download-source-icon {
+				filter: drop-shadow(var(--fds-flyout-shadow));
+				transform: translateY(-2px);
+			}
+		}
+	}
+
+	:global {
+		.download-source-description {
+			text-align: left;
+			max-width: 50rem;
+		}
+	}
+
+	.download-source-icon {
+		max-inline-size: 10rem;
+		transition: var(--fds-control-normal-duration) ease;
+	}
+
+	.label-container {
+		margin-left: 4rem;
+		display: flex;
+		align-items: flex-start;
+		justify-items: stretch;
+		flex-direction: column;
+		flex-grow: 1;
+		gap: 1rem;
+	}
+}

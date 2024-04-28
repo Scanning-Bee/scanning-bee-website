@@ -44,7 +44,7 @@
 		},
 		{
 			name: $_("navbar.download"),
-			path: base + "/download",
+			path: base + "/#download",
 			icon: Download,
 		},
 	];
