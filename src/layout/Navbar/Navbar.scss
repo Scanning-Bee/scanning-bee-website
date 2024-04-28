@@ -84,7 +84,6 @@
 	}
 }
 
-
 .buttons {
 	z-index: 1;
 	display: flex;
@@ -166,7 +165,7 @@
 	}
 }
 
-@media screen and (width < 648px) {
+@media screen and (width < 850px) {
 	.navbar {
 		position: fixed;
 		inset-block-start: 0;

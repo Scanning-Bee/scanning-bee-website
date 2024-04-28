@@ -173,7 +173,12 @@
 			<ListItem {href} type="navigation" {...externalLink}>
 				<svelte:fragment slot="icon">
 					{#if imageSrc}
-						<img alt={name} class="button-image" src={imageSrc} />
+						<img
+							alt={name}
+							class="button-image"
+							src={imageSrc}
+							style="margin-inline-end: 12px;"
+						/>
 					{/if}
 				</svelte:fragment>
 				<span>{name}</span>
