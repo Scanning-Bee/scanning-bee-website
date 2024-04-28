@@ -116,6 +116,16 @@
 	}
 }
 
+.button-image {
+	@include flex($align: center, $justify: center);
+	inline-size: 20px;
+	block-size: 20px;
+	border: none;
+	border-radius: var(--fds-control-corner-radius);
+	background-color: transparent;
+	cursor: pointer;
+}
+
 :global {
 	.navbar .button.sidebar-button {
 		inline-size: 38px;

@@ -16,7 +16,7 @@
 	import Download from "~icons/fluent/arrow-download-24-regular";
 	import { afterNavigate, onNavigate } from "$app/navigation";
 	import { onMount } from "svelte";
-	import type { NavbarItem } from '$data/links';
+	import type { NavbarButton, NavbarItem } from '$data/links';
 	// import PaintBrush from "~icons/fluent/paint-brush-24-regular";
 
 	const navbarItems: NavbarItem[] = [
@@ -47,22 +47,25 @@
 		},
 	];
 
-	const navbarButtons = [
+	const navbarButtons: NavbarButton[] = [
 		{
-			label: $_("navbar.ceng", defaultI18nValues),
+			name: $_("navbar.ceng", defaultI18nValues),
 			href: "https://ceng.metu.edu.tr/",
-			icon: Chat,
+			imageSrc: "/logos/ceng.png",
+			external: true,
 		},
 		{
-			label: $_("navbar.metu", defaultI18nValues),
+			name: $_("navbar.metu", defaultI18nValues),
 			href: "https://metu.edu/",
-			icon: Code,
+			imageSrc: "/logos/metu.png",
+			external: true,
 		},
-		{
-			label: $_("navbar.roboroyale", defaultI18nValues),
+		/* {
+			name: $_("navbar.roboroyale", defaultI18nValues),
 			href: "https://roboroyale.eu/",
-			icon: Code,
-		}
+			imageSrc: "https://roboroyale.eu/assets/img/logo.png",
+			external: true,
+		} */
 	];
 
 	onNavigate(async navigation => {

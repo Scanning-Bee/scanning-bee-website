@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { navigating, page } from "$app/stores";
-	import type { NavbarItem } from "$data/links";
+	import type { NavbarButton, NavbarItem } from "$data/links";
 	import { _ } from "svelte-i18n";
 	import {
 		defaultI18nValues,
@@ -13,11 +13,7 @@
 	import type { SvelteHTMLElements } from "svelte/elements";
 
 	export let items: NavbarItem[] = [];
-	export let buttons: {
-		icon: typeof SvelteComponent<SvelteHTMLElements["svg"]>;
-		href: string;
-		label: string;
-	}[] = [];
+	export let buttons: NavbarButton[] = [];
 
 	let innerWidth = 851; // Don't render the mobile layout before hydration
 	let sidebarVisible = false;
@@ -125,15 +121,21 @@
 	</nav>
 	<div class="buttons">
 		{#if innerWidth > 850}
-			{#each buttons as { icon, href, label }}
+			{#each buttons as { name, href, external, imageSrc }}
 				<a
 					class="button"
 					{href}
-					aria-label={label}
-					title={label}
+					aria-label={name}
+					title={name}
 					{...externalLink}
 				>
-					<svelte:component this={icon} />
+					{#if imageSrc}
+						<img
+							alt={name}
+							class="button-image"
+							src={imageSrc}
+						/>
+					{/if}
 				</a>
 			{/each}
 		{:else}
@@ -173,14 +175,18 @@
 			{/if}
 		{/each}
 		<hr />
-		{#each buttons as { icon, href, label }}
+		{#each buttons as { name, href, external, imageSrc }}
 			<ListItem {href} type="navigation" {...externalLink}>
 				<svelte:fragment slot="icon">
-					{#if icon}
-						<svelte:component this={icon} />
+					{#if imageSrc}
+						<img
+							alt={name}
+							class="button-image"
+							src={imageSrc}
+						/>
 					{/if}
 				</svelte:fragment>
-				<span>{label}</span>
+				<span>{name}</span>
 			</ListItem>
 		{/each}
 	</aside>
