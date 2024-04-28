@@ -1,5 +1,3 @@
-import { links } from "$data/links";
-
 export type ContributorData = {
 	login: string;
 	avatar_url: string;
@@ -8,10 +6,6 @@ export type ContributorData = {
 };
 
 export const load = async ({ }) => {
-	// TODO:
-	/* const githubContribData = (page: number) =>
-		`https://api.github.com/repos/${links.github.owner}/${links.github.repo}/contributors?per_page=25&page=${page}`; */
-
 	const data: ContributorData[] = [
 		{
 			login: "Baran Yancı",

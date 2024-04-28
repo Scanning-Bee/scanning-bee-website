@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { defaultI18nValues, externalLink, PageSection } from "$lib";
 	import { Button, IconButton } from "fluent-svelte";
-	import { links } from "$data/links";
 	import { _ } from "svelte-i18n";
 	import Github from "./icons/github.svg?raw";
 	import Discord from "./icons/discord.svg?raw";
@@ -28,29 +27,11 @@
 			</picture>
 			Scanning Bee
 		</a>
-		<div class="social-links">
-			<IconButton
-				href="https://github.com/{links.github.owner}/{links.github.repo}/"
-				title="GitHub repository"
-				aria-label="GitHub repository"
-				{...externalLink}
-			>
-				{@html Github}
-			</IconButton>
-			<IconButton
-				href="https://discord.gg/{links.discord}"
-				title="Discord server"
-				aria-label="Discord server"
-				{...externalLink}
-			>
-				{@html Discord}
-			</IconButton>
-		</div>
-		<!-- <p>
-			{$_("Copyright (c) {year} Files Community", {
+		<p>
+			{$_("Copyright (c) {year} Scanning Bee", {
 				values: { year: new Date().getFullYear() },
 			})}
-		</p> -->
+		</p>
 	</div>
 	<div class="column">
 		<p>Pages</p>
@@ -62,26 +43,28 @@
 		</Button>
 	</div>
 	<div class="column">
-		<p>{$_("footer.contribute", defaultI18nValues)}</p>
-		<Button
-			variant="hyperlink"
-			{...externalLink}
-			href="https://github.com/{links.github.owner}/{links.github
-				.repo}/issues/new/choose"
-		>
-			{$_("footer.feedback", defaultI18nValues)}
-		</Button>
-
+		<p>{$_("footer.externalLinks", defaultI18nValues)}</p>
 		<Button
 			{...externalLink}
-			href="https://crowdin.com/project/files-app"
+			href="https://ceng.metu.edu.tr/"
 			variant="hyperlink"
 		>
-			{$_("footer.translations", defaultI18nValues)}
+			METU CENG
 		</Button>
-	</div>
-	<div class="column">
-		<p>{$_("footer.web_team", defaultI18nValues)}</p>
+		<Button
+			{...externalLink}
+			href="https://metu.edu/"
+			variant="hyperlink"
+		>
+			METU
+		</Button>
+		<Button
+			{...externalLink}
+			href="https://roboroyale.eu/"
+			variant="hyperlink"
+		>
+			RoboRoyale
+		</Button>
 	</div>
 </PageSection>
 

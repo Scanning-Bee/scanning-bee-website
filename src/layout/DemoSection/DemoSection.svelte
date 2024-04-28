@@ -12,11 +12,9 @@
 		</div>
 		<hr />
 		<iframe
-			class="demo-section-video"
-			width="560"
-			height="315"
+			class="demo-section-player"
 			src="https://www.youtube.com/embed/P4hj0zYlYDQ?si=Z-5Oqvu8yYn6ENbP"
-			title="YouTube video player"
+			title="Scanning Bee Demo"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 			referrerpolicy="strict-origin-when-cross-origin"

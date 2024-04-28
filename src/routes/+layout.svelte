@@ -4,7 +4,6 @@
 
 	import { defaultI18nValues } from "$lib";
 	import { Footer, Navbar } from "$layout";
-	import { links, type NavbarItem } from "$data/links";
 	import { _ } from "svelte-i18n";
 
 	import "fluent-svelte/theme.css";
@@ -17,15 +16,29 @@
 	import Download from "~icons/fluent/arrow-download-24-regular";
 	import { afterNavigate, onNavigate } from "$app/navigation";
 	import { onMount } from "svelte";
+	import type { NavbarItem } from '$data/links';
 	// import PaintBrush from "~icons/fluent/paint-brush-24-regular";
-
-	const { github, discord } = links;
 
 	const navbarItems: NavbarItem[] = [
 		{
 			name: $_("navbar.home", defaultI18nValues),
 			path: "/",
 			icon: Home,
+		},
+		{
+			name: $_("navbar.features"),
+			path: "#features",
+			icon: Code,
+		},
+		{
+			name: $_("navbar.technologies"),
+			path: "#technologies",
+			icon: Code,
+		},
+		{
+			name: $_("navbar.team"),
+			path: "#team",
+			icon: Chat,
 		},
 		{
 			name: $_("navbar.download"),
@@ -36,15 +49,20 @@
 
 	const navbarButtons = [
 		{
-			label: $_("navbar.discord", defaultI18nValues),
-			href: `https://discord.gg/${discord}`,
+			label: $_("navbar.ceng", defaultI18nValues),
+			href: "https://ceng.metu.edu.tr/",
 			icon: Chat,
 		},
 		{
-			label: $_("navbar.github", defaultI18nValues),
-			href: `https://github.com/${github.owner}/${github.repo}`,
+			label: $_("navbar.metu", defaultI18nValues),
+			href: "https://metu.edu/",
 			icon: Code,
 		},
+		{
+			label: $_("navbar.roboroyale", defaultI18nValues),
+			href: "https://roboroyale.eu/",
+			icon: News,
+		}
 	];
 
 	onNavigate(async navigation => {

@@ -97,7 +97,8 @@
 	"footer": {
 		"home": "Home",
 		"download": "Download",
-		"feedback": "Give Feedback"
+		"externalLinks": "External Links",
+		"source": "Source Code"
 	},
 	"navbar": {
 		"home": "Home",
@@ -105,9 +106,11 @@
 		"features": "Features",
 		"technologies": "Technologies",
 		"team": "Team",
+		"demo": "Demo",
 		"download": "Download",
-		"discord": "Discord",
-		"github": "Github"
+		"metu": "METU",
+		"ceng": "CENG",
+		"roboroyale": "RoboRoyale"
 	},
 	"download": {
 		"title": "Download {AppName}",

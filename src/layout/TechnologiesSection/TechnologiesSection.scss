@@ -20,7 +20,11 @@
 .technology-image {
 	width: 80px;
 	height: 80px;
-	filter: grayscale(100%);
+	
+	@media screen and (width > 648px) {
+		filter: grayscale(100%);
+	}
+	
 	transition: filter 0.3s;
 }
 

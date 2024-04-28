@@ -26,4 +26,13 @@
 		justify-content: center;
 		flex-direction: column;
 	}
+
+	&player {
+		width: 560px;
+		height: 315px;
+
+		@media screen and (width < 648px) {
+			width: 100%;
+		}
+	}
 }

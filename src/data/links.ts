@@ -1,16 +1,6 @@
 import type { SvelteComponent } from "svelte";
 import type { SvelteHTMLElements } from "svelte/elements";
 
-export const links = {
-	discord: "files",
-	storeId: "9nghp3dx8hdx",
-	github: {
-		owner: "files-community",
-		repo: "files",
-		siteRepo: "website",
-	},
-};
-
 export type NavbarItem = {
 	name: string;
 	path: string;
