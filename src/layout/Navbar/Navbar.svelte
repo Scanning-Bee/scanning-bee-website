@@ -19,7 +19,7 @@
 		label: string;
 	}[] = [];
 
-	let innerWidth = 649; // Don't render the mobile layout before hydration
+	let innerWidth = 851; // Don't render the mobile layout before hydration
 	let sidebarVisible = false;
 	let sidebar: HTMLElement;
 	let sidebarButton: HTMLButtonElement;
@@ -41,6 +41,35 @@
 			toggleSidebar();
 		}
 	};
+
+	const handleAnchorClick = (event: any) => {
+		event.preventDefault();
+		const link = event.currentTarget;
+
+		const hash = new URL(link!.href).hash;
+
+		console.log(hash);
+
+		// ignore if the link is not an anchor
+		if (!hash.startsWith('#')) {
+			window.location.href = link.href;
+			return;
+		}
+
+		window.location.href = link.href;
+
+		const anchorId = hash.replace('#', '');
+		const anchor = document.getElementById(`${anchorId}-section`);
+
+		if (!anchor) return;
+
+		window.scrollTo({
+			top: anchor.offsetTop,
+			behavior: 'smooth'
+		});
+
+		window.history.pushState(null, '', hash);
+	}
 
 	$: {
 		$navigating && (sidebarVisible = false);
@@ -71,7 +100,7 @@
 			</picture>
 			Scanning Bee
 		</a>
-		{#if innerWidth > 648}
+		{#if innerWidth > 850}
 			<div class="divider" />
 			{#each items as { name, path, external, icon, type }}
 				{#if type === "divider"}
@@ -83,6 +112,7 @@
 						href={path}
 						target={external ? "_blank" : undefined}
 						rel={external ? "noreferrer noopener" : undefined}
+						on:click={handleAnchorClick}
 					>
 						{#if icon}
 							<svelte:component this={icon} />
@@ -94,7 +124,7 @@
 		{/if}
 	</nav>
 	<div class="buttons">
-		{#if innerWidth > 648}
+		{#if innerWidth > 850}
 			{#each buttons as { icon, href, label }}
 				<a
 					class="button"

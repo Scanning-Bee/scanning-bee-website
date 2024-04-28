@@ -12,7 +12,7 @@
 	import Code from "~icons/fluent/code-24-regular";
 	import Home from "~icons/fluent/home-24-regular";
 	import Book from "~icons/fluent/book-24-regular";
-	import News from "~icons/fluent/news-24-regular";
+	import Team from "~icons/fluent/people-audience-24-regular";
 	import Download from "~icons/fluent/arrow-download-24-regular";
 	import { afterNavigate, onNavigate } from "$app/navigation";
 	import { onMount } from "svelte";
@@ -27,18 +27,18 @@
 		},
 		{
 			name: $_("navbar.features"),
-			path: "#features",
-			icon: Code,
+			path: "/#features",
+			icon: Book,
 		},
 		{
 			name: $_("navbar.technologies"),
-			path: "#technologies",
+			path: "/#technologies",
 			icon: Code,
 		},
 		{
 			name: $_("navbar.team"),
-			path: "#team",
-			icon: Chat,
+			path: "/#team",
+			icon: Team,
 		},
 		{
 			name: $_("navbar.download"),
@@ -61,7 +61,7 @@
 		{
 			label: $_("navbar.roboroyale", defaultI18nValues),
 			href: "https://roboroyale.eu/",
-			icon: News,
+			icon: Code,
 		}
 	];
 

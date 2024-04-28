@@ -168,13 +168,13 @@
 		}
 
 		// Add some variation between rows
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			inset-inline-start: 24px;
 			float: left;
 			animation: contributors-right 300s linear infinite alternate;
 		}
 
-		&:nth-child(odd) {
+		&:nth-child(even) {
 			inset-inline-start: -24px;
 			float: right;
 			animation: contributors-left 300s linear infinite alternate;
