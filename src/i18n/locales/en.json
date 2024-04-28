@@ -116,9 +116,17 @@
 		"title": "Download {AppName}",
 		"donation_description": "{AppName} is a community-driven project that depends on your support to grow and improve. Please consider purchasing {AppName} through the Microsoft Store or supporting us on GitHub if you use the classic installer.",
 		"donation_button": "Donate",
-		"microsoft_store": {
-			"title": "Download Files",
-			"description": "Purchasing {AppName} through the Microsoft Store helps support the developers and allows us to continue updating the app with new features and improvements."
+		"windows": {
+			"title": "Download for Windows",
+			"description": "Download the latest version of {AppName} for Windows. Requires Windows 10 or later."
+		},
+		"mac": {
+			"title": "Download for macOS",
+			"description": "Download the latest version of {AppName} for macOS. Requires macOS 10.12 or later."
+		},
+		"source": {
+			"title": "Download Source Code",
+			"description": "Download the source code for {AppName}. Requires Node.js and npm."
 		},
 		"preview": {
 			"title": "Download Insider Preview",

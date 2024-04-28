@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { externalLink } from "$lib";
+	import { defaultI18nValues, externalLink } from "$lib";
 	import { TextBlock } from "fluent-svelte";
 	import type { DownloadSource } from "./types";
+	import { _ } from 'svelte-i18n';
 
 	export let source: DownloadSource;
 
@@ -30,6 +31,7 @@
 			class="download-source-icon"
 			src={source.icon}
 			alt="{source.name} logo"
+			style={`scale: ${source.name === $_("download.source.title", defaultI18nValues) ? 1 : 0.9}`}
 		/>
 	</picture>
 	<div class="label-container">

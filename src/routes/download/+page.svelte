@@ -8,22 +8,37 @@
 
 	const downloadSources = [
 		{
-			name: $_("download.microsoft_store.title", defaultI18nValues),
+			name: $_("download.windows.title", defaultI18nValues),
 			description: $_(
-				"download.microsoft_store.description",
+				"download.windows.description",
 				defaultI18nValues
 			),
 			href: `ms-windows-store://pdp/?ProductId=9nghp3dx8hdx&cid=FilesWebsite`,
-			icon: "/branding/logo-light.svg",
-			darkModeIcon: "/branding/logo-dark.svg",
+			icon: "/download-sources/windows.svg",
+			darkModeIcon: "/download-sources/windows.svg",
 			external: true,
 		},
 		{
-			name: $_("download.preview.title", defaultI18nValues),
-			description: $_("download.preview.description", defaultI18nValues),
-			href: "/appinstallers/Files.preview.appinstaller",
-			icon: "/download-sources/preview_light.svg",
-			darkModeIcon: "/download-sources/preview_dark.svg",
+			name: $_("download.mac.title", defaultI18nValues),
+			description: $_(
+				"download.mac.description",
+				defaultI18nValues
+			),
+			href: `ms-windows-store://pdp/?ProductId=9nghp3dx8hdx&cid=FilesWebsite`,
+			icon: "/download-sources/mac_black.svg",
+			darkModeIcon: "/download-sources/mac_white.svg",
+			external: true,
+		},
+		{
+			name: $_("download.source.title", defaultI18nValues),
+			description: $_(
+				"download.source.description",
+				defaultI18nValues
+			),
+			href: `ms-windows-store://pdp/?ProductId=9nghp3dx8hdx&cid=FilesWebsite`,
+			icon: "/download-sources/source_code.svg",
+			darkModeIcon: "/download-sources/source_code.svg",
+			external: true,
 		},
 	] as const satisfies readonly DownloadSource[];
 </script>
@@ -36,35 +51,11 @@
 	<TextBlock variant="titleLarge" style="text-align: center;"
 		>{$_("download.title", defaultI18nValues)}</TextBlock
 	>
-	<InfoBar class="donation-infobar" severity="success" closable={false}>
-		<div
-			style="display: flex; gap: 0.5rem; margin-block-end: 7px; margin-block-start: 7px;"
-		>
-			{$_("download.donation_description", defaultI18nValues)}
-
-			<Button
-				slot="action"
-				variant="accent"
-				href="https://github.com/sponsors/yaira2"
-				{...externalLink}
-			>
-				{$_("download.donation_button", defaultI18nValues)}
-			</Button>
-		</div>
-
-		<svelte:fragment slot="icon">&nbsp;</svelte:fragment>
-	</InfoBar>
 
 	<section class="download-sources">
 		{#each downloadSources as source}
 			<DownloadSourceCard {source} />
 		{/each}
-		<p>
-			{$_("download.self_signed.description", defaultI18nValues)}<a
-				href="https://cdn.files.community/files/download/Files.Stable.exe"
-				>{$_("download.self_signed.link_text", defaultI18nValues)}</a
-			>.
-		</p>
 	</section>
 </main>
 
