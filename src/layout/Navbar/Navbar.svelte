@@ -147,26 +147,25 @@
 		class="sidebar scroller"
 		class:visible={sidebarVisible}
 	>
-		{#each items as { name, path, external, sidebarTree, icon, type }}
+		{#each items as { name, path, external, icon, type }}
 			{#if type === "divider"}
 				<hr />
-			{:else if !sidebarTree}
-				<ListItem
-					type="navigation"
-					on:click={toggleSidebar}
-					selected={isUrlContainPath($page.url.pathname, path)}
-					href={path}
-					target={external ? "_blank" : undefined}
-					rel={external ? "noreferrer noopener" : undefined}
-				>
-					<svelte:fragment slot="icon">
-						{#if icon}
-							<svelte:component this={icon} />
-						{/if}
-					</svelte:fragment>
-					<span>{name}</span>
-				</ListItem>
 			{/if}
+			<ListItem
+				type="navigation"
+				on:click={toggleSidebar}
+				selected={isUrlContainPath($page.url.pathname, path)}
+				href={path}
+				target={external ? "_blank" : undefined}
+				rel={external ? "noreferrer noopener" : undefined}
+			>
+				<svelte:fragment slot="icon">
+					{#if icon}
+						<svelte:component this={icon} />
+					{/if}
+				</svelte:fragment>
+				<span>{name}</span>
+			</ListItem>
 		{/each}
 		<hr />
 		{#each buttons as { name, href, external, imageSrc }}
