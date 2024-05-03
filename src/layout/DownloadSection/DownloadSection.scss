@@ -2,6 +2,8 @@
 
 :global {
 	#download-section {
+		background-color: var(--fds-solid-background-base);
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
