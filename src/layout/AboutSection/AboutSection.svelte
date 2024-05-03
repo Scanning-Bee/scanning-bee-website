@@ -15,7 +15,6 @@
 	<p>{$_("home.about.description", defaultI18nValues)}</p>
 	<div class="buttons-spacer">
 		<Button
-			href={`${base}/#download/`}
 			variant="accent"
 			on:click={() => {
 				document
