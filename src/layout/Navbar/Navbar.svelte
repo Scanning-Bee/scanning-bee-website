@@ -38,22 +38,10 @@
 
 	const handleAnchorClick = (event: any) => {
 		event.preventDefault();
-		const link = event.currentTarget;
 
-		const hash = new URL(link!.href).hash;
+		const section: string = event.target.innerText;
 
-		console.log(hash);
-
-		// ignore if the link is not an anchor
-		if (!hash.startsWith("#")) {
-			window.location.href = link.href;
-			return;
-		}
-
-		window.location.href = link.href;
-
-		const anchorId = hash.replace("#", "");
-		const anchor = document.getElementById(`${anchorId}-section`);
+		const anchor = document.getElementById(`${section.toLowerCase()}-section`);
 
 		if (!anchor) return;
 
@@ -61,8 +49,6 @@
 			top: anchor.offsetTop,
 			behavior: "smooth",
 		});
-
-		window.history.pushState(null, "", hash);
 	};
 
 	$: {
@@ -96,7 +82,7 @@
 		</a>
 		{#if innerWidth > 850}
 			<div class="divider" />
-			{#each items as { name, path, external, icon, type }}
+			{#each items as { name, section: path, external, icon, type }}
 				{#if type === "divider"}
 					<div class="divider" />
 				{:else}
@@ -147,7 +133,7 @@
 		class="sidebar scroller"
 		class:visible={sidebarVisible}
 	>
-		{#each items as { name, path, external, icon, type }}
+		{#each items as { name, section: path, external, icon, type }}
 			{#if type === "divider"}
 				<hr />
 			{/if}

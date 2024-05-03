@@ -3,7 +3,7 @@ import type { SvelteHTMLElements } from "svelte/elements";
 
 export type NavbarItem = {
 	name: string;
-	path: string;
+	section: string;
 	external?: boolean;
 	icon: typeof SvelteComponent<SvelteHTMLElements["svg"]>;
 	type?: string;

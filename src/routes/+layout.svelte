@@ -24,27 +24,27 @@
 	const navbarItems: NavbarItem[] = [
 		{
 			name: $_("navbar.home", defaultI18nValues),
-			path: base + "/",
+			section: "home",
 			icon: Home,
 		},
 		{
 			name: $_("navbar.features"),
-			path: base + "/#features",
+			section: "features",
 			icon: Book,
 		},
 		{
 			name: $_("navbar.technologies"),
-			path: base + "/#technologies",
+			section: "technologies",
 			icon: Code,
 		},
 		{
 			name: $_("navbar.team"),
-			path: base + "/#team",
+			section: "team",
 			icon: Team,
 		},
 		{
 			name: $_("navbar.download"),
-			path: base + "/#download",
+			section: "download",
 			icon: Download,
 		},
 	];
