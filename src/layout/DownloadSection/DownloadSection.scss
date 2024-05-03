@@ -4,15 +4,7 @@
 	#download-section {
 		background-color: var(--fds-solid-background-base);
 
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: stretch;
-		gap: 2rem;
-		padding: 2rem;
-		margin-inline: auto;
-
-		inline-size: fit-content;
+		
 
 		.page-section-inner {
 			display: flex;
