@@ -82,23 +82,20 @@
 		</a>
 		{#if innerWidth > 850}
 			<div class="divider" />
-			{#each items as { name, section: path, external, icon, type }}
+			{#each items as { name, section, external, icon, type }}
 				{#if type === "divider"}
 					<div class="divider" />
 				{:else}
-					<a
+					<button
 						class="item"
-						class:selected={isUrlContainPath($page.url.pathname, path)}
-						href={path}
-						target={external ? "_blank" : undefined}
-						rel={external ? "noreferrer noopener" : undefined}
+						class:selected={false}
 						on:click={handleAnchorClick}
 					>
 						{#if icon}
 							<svelte:component this={icon} />
 						{/if}
 						<span>{name}</span>
-					</a>
+					</button>
 				{/if}
 			{/each}
 		{/if}
@@ -133,15 +130,14 @@
 		class="sidebar scroller"
 		class:visible={sidebarVisible}
 	>
-		{#each items as { name, section: path, external, icon, type }}
+		{#each items as { name, section, external, icon, type }}
 			{#if type === "divider"}
 				<hr />
 			{/if}
 			<ListItem
 				type="navigation"
-				on:click={toggleSidebar}
-				selected={isUrlContainPath($page.url.pathname, path)}
-				href={path}
+				on:click={handleAnchorClick}
+				selected={false}
 				target={external ? "_blank" : undefined}
 				rel={external ? "noreferrer noopener" : undefined}
 			>
