@@ -37,10 +37,15 @@
 	</div>
 	<div class="column">
 		<p>Pages</p>
-		<Button variant="hyperlink" href={base}>
+		<Button variant="hyperlink" on:click={() => scrollTo({ top: 0 })}>
 			{$_("footer.home", defaultI18nValues)}
 		</Button>
-		<Button variant="hyperlink" href={base + "/#download"}>
+		<Button variant="hyperlink" on:click={() => {
+			const element = document.getElementById("download-section");
+			if (element) {
+				element.scrollIntoView({ behavior: "smooth" });
+			}
+		}}>
 			{$_("footer.download", defaultI18nValues)}
 		</Button>
 	</div>
