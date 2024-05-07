@@ -29,17 +29,17 @@
 		<picture>
 			<source
 				media="(prefers-color-scheme: dark)"
-				srcset={`${base}/screenshots/scanning-bee.png`}
+				srcset={`${base}/screenshots/scanning-bee-dark.png`}
 			/>
 			<source
 				media="(prefers-color-scheme: light)"
-				srcset={`${base}/screenshots/scanning-bee.png`}
+				srcset={`${base}/screenshots/scanning-bee-light.png`}
 			/>
 			<img
 				alt="Scanning Bee screenshot"
 				class="scanning-bee-screenshot"
 				height="768"
-				src={`${base}/screenshots/scanning-bee.png`}
+				src={`${base}/screenshots/scanning-bee-light.png`}
 				style:transform="translateY({Math.floor(scrollPositionY / +20)}px)"
 				width="1024"
 			/>
