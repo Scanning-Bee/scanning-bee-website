@@ -8,7 +8,7 @@
 		"about": {
 			"chip": "About Scanning Bee",
 			"title": "Annotate, scan, and visualize.",
-			"description": "{AppName} is a free and open source tool for Windows, macOS, and Linux that allows you to annotate, scan, and visualize your beehive. It is designed to be easy to use and highly customizable.",
+			"description": "{AppName} is a cross-platform, free and open source tool that allows you to annotate, scan, and visualize your real beehive using cutting-edge AI technologies. It is designed to be easy to use and highly customizable.",
 			"download": "Download",
 			"learn_more": "Learn more"
 		},
