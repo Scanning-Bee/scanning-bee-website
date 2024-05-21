@@ -18,7 +18,7 @@
 		</div>
 		<iframe
 			class="demo-section-player"
-			src="https://www.youtube.com/embed/bweNPfQS9b0?si=_aQQP8iSGmxUAp1c"
+			src="https://www.youtube.com/embed/Kui02z1jJS0?si=VHiBCbpMhKxGk5Pg"
 			title="Scanning Bee Demo"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
