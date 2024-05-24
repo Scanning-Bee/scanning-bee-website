@@ -93,6 +93,10 @@
 			"title": "See {AppName} in action.",
 			"description": "Watch a demo of {AppName} to see how it works and what it can do for you. {AppName} is designed to be easy to use and highly customizable, so you can monitor your beehive with ease and keep track of everything that's happening inside."
 		},
+		"first-itw": {
+			"title": "The First in the World.",
+			"description": "{AppName} is the only tool in the world that allows you to see results from your beehive in real time. No need to empty your hive, no need to wait for results. Just open the app and see the results instantly."
+		},
 		"download": {
 			"chip": "Download",
 			"title": "Get started with {AppName} today.",

@@ -152,13 +152,12 @@ code {
 	}
 }
 
+::-webkit-scrollbar-track {
+	background: transparent;
+}
 // An attempt at recreating WinUI 2.6 scrollbars
 // (mixed results)
 ::-webkit-scrollbar {
-	display: block;
-	inline-size: 14px;
-	border-radius: 14px;
-
 	// Why does webkit have to be such a pain to work with sometimes?
 	// At least it's not firefox.
 	&:vertical {

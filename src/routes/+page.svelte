@@ -5,6 +5,7 @@
 		FeaturesSection,
 		TechnologiesSection,
 		DemoSection,
+		FirstITWSection,
 		DownloadSection,
 	} from "$layout";
 	import { defaultI18nValues, Metadata } from "$lib";
@@ -17,6 +18,8 @@
 <Metadata title={$_("metadata.home", defaultI18nValues)} />
 
 <AboutSection />
+
+<FirstITWSection />
 
 <FeaturesSection />
 
