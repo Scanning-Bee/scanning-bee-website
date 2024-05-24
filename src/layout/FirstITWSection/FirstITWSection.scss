@@ -44,7 +44,7 @@
 		}
 
 		p {
-			color: white !important;
+			color: #dddddd !important;
 			margin-inline: 15ch;
 			@media screen and (width < 648px) {
 				margin-inline: 0;
@@ -59,14 +59,5 @@
 		flex-direction: column;
 		width: 100%;
 		height: 100%;
-	}
-
-	&player {
-		width: 560px;
-		height: 315px;
-
-		@media screen and (width < 648px) {
-			width: 100%;
-		}
 	}
 }

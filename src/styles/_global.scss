@@ -37,13 +37,53 @@
 	font-named-instance: "Italic";
 }
 
+@font-face {
+	font-family: "Neue Montreal";
+	font-style: normal;
+	font-weight: 800 900;
+	font-display: swap;
+	src: url("/Scanning-Bee/fonts/NeueMontreal-Bold.otf") format("opentype");
+	font-named-instance: "Bold";
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	font-style: normal;
+	font-weight: 100 200;
+	font-display: swap;
+	src: url("/Scanning-Bee/fonts/NeueMontreal-Light.otf") format("opentype");
+	font-named-instance: "Light";
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	font-style: normal;
+	font-weight: 300 500;
+	font-display: swap;
+	src: url("/Scanning-Bee/fonts/NeueMontreal-Regular.otf") format("opentype");
+	font-named-instance: "Regular";
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	font-style: normal;
+	font-weight: 600 700;
+	font-display: swap;
+	src: url("/Scanning-Bee/fonts/NeueMontreal-Medium.otf") format("opentype");
+	font-named-instance: "Medium";
+}
+
 /*
  * Global Variables
  */
 
 :root {
-	--fds-font-family-fallback: "Segoe UI", "Inter", "Open Sans", -apple-system,
-		ui-sans-serif, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+	--fds-font-family-display: "Neue Montreal", "Segoe UI", "Inter", "Open Sans",
+		-apple-system, ui-sans-serif, system-ui, BlinkMacSystemFont, Helvetica,
+		Arial, sans-serif;
+	--fds-font-family-fallback: "Neue Montreal" "Segoe UI", "Inter", "Open Sans",
+		-apple-system, ui-sans-serif, system-ui, BlinkMacSystemFont, Helvetica,
+		Arial, sans-serif;
 	--font-family-sans-serif: var(--fds-font-family-display);
 	--font-family-monospace: "Cascadia Code", "Fira Code", "Consolas", monospace;
 	overflow-x: hidden;
