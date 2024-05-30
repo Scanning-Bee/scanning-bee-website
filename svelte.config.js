@@ -1,5 +1,6 @@
 import remarkA11yEmoji from "@fec/remark-a11y-emoji";
 import adapter from "@sveltejs/adapter-static";
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { mdsvex } from "mdsvex";
 import rehypeColorPreview from "rehype-color-preview";
 import remarkGfm from "remark-gfm";
@@ -25,6 +26,7 @@ const config = {
 		},
 	},
 	preprocess: [
+		vitePreprocess(),
 		mdsvex({
 			extensions: [".md"],
 
