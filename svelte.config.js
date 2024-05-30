@@ -18,7 +18,7 @@ const config = {
 		},
 		adapter: adapter(),
 		paths: {
-			base: "/Scanning-Bee",
+			base: "",
 		},
 		prerender: {
 			handleMissingId: "ignore",
