@@ -1,4 +1,4 @@
-<h1 align="center">Scanning Bee Website • <a href="https://senior.ceng.metu.edu.tr/2024/Scanning-Bee">senior.ceng.metu.edu</a></h1>
+<h1 align="center">Scanning Bee Website</h1>
 
 <p align="center">
     <a href="#overview">Overview</a> |
@@ -16,7 +16,7 @@
 
 # Overview
 
-This repository contains the source code for the [Scanning Bee website](https://senior.ceng.metu.edu.tr/2024/Scanning-Bee). The site is written using [SvelteKit](https://svelte.dev), [TypeScript](https://typescriptlang.org/) and [SCSS](https://sass-lang.com).
+This repository contains the source code for the [Scanning Bee website](https://scanning-bee.github.io). The site is written using [SvelteKit](https://svelte.dev), [TypeScript](https://typescriptlang.org/) and [SCSS](https://sass-lang.com).
 
 ## Codebase Structure
 
