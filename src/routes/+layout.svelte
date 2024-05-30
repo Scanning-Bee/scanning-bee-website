@@ -51,15 +51,9 @@
 
 	const navbarButtons: NavbarButton[] = [
 		{
-			name: $_("navbar.ceng", defaultI18nValues),
-			href: "https://ceng.metu.edu.tr/",
-			imageSrc: base + "/logos/ceng.png",
-			external: true,
-		},
-		{
-			name: $_("navbar.metu", defaultI18nValues),
-			href: "https://metu.edu/",
-			imageSrc: base + "/logos/metu.png",
+			name: $_("navbar.github", defaultI18nValues),
+			href: "https://github.com/Scanning-Bee",
+			imageSrc: base + "/logos/github.png",
 			external: true,
 		},
 		/* {
